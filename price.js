@@ -23,13 +23,13 @@ $(function () {
 function init() {
     if (typeof (Storage) !== "undefined") {
 
-        var product = localStorage.getItem("Product") || "ProdE1";
-        var level = localStorage.getItem("Level") || "LevelA";
+        var product = localStorage.getItem("Price.Product") || "ProdE1";
+        var level = localStorage.getItem("Price.Level") || "LevelA";
 
         $("#" + product).attr("checked", true);
         $("#" + level).attr("checked", true);
 
-        $("#YearMode").prop("checked", localStorage.getItem("YearMode") === "true");
+        $("#YearMode").prop("checked", localStorage.getItem("Price.YearMode") === "true");
 
     } else {
 
@@ -48,9 +48,9 @@ function init() {
 function SaveState() {
     if (typeof (Storage) == "undefined") return;
    
-    localStorage.setItem("Product", $(".product input:checked").val());
-    localStorage.setItem("Level", $(".level input:checked").val());
-    localStorage.setItem("YearMode", $("#YearMode").prop("checked"));
+    localStorage.setItem("Price.Product", $(".product input:checked").val());
+    localStorage.setItem("Price.Level", $(".level input:checked").val());
+    localStorage.setItem("Price.YearMode", $("#YearMode").prop("checked"));
 }
 
 function ProductChanged() {
