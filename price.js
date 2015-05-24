@@ -1,7 +1,7 @@
 var PriceList = {
-    ProdE1: { "LevelA": 5.95, "LevelB": 5.76, "LevelC": 5.76, "LevelD": 5.6 },
-    ProdE3: { "LevelA": 5.95, "LevelB": 5.76, "LevelC": 5.7, "LevelD": 5.6 },
-    ProdE4: { "LevelA": 5.95, "LevelB": 5.76, "LevelC": 5.76, "LevelD": 5.6 },
+    ProdE1: { "LevelA": 5.95, "LevelB": 5.76, "LevelC": 5.58, "LevelD": 5.4 },
+    ProdE3: { "LevelA": 17.66, "LevelB": 17.12, "LevelC": 16.57, "LevelD": 16.02 },
+    ProdE4: { "LevelA": 19.43, "LevelB": 18.83, "LevelC": 18.22, "LevelD": 17.63 },
 }
 
 var Price = Price || {};
