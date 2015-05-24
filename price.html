@@ -14,12 +14,14 @@
     <body>
         <div data-role="page">
             <div role="main" class="ui-content">
-                <div class="inputs wide">
+                <div class="wide ui-field-contain">
                     <input class="spinner" id="price" />
-                    <input type="range" name="slider-2" id="discount" data-highlight="true" min="0" max="50" value="0" step="0.5" />
+                </div>
+                <div class="discountdiv wide ui-field-contain">
+                    <input type="range" id="discount" data-highlight="true" min="0" max="50" value="0" step="0.5" />
                 </div>
                 <div class="wide">
-                    <div class="product radio wide" data-role="fieldcontain">
+                    <div class="product radio wide ui-field-contain">
                         <fieldset data-role="controlgroup" data-type="horizontal">
                             <input type="radio" name="product" id="ProdE1" value="ProdE1" />
                             <label for="ProdE1">E1</label>
@@ -29,7 +31,7 @@
                             <label for="ProdE4">E4</label>
                         </fieldset>
                     </div>
-                    <div class="level radio wide" data-role="fieldcontain">
+                    <div class="level radio wide ui-field-contain">
                         <fieldset data-role="controlgroup" data-type="horizontal">
                             <input type="radio" name="level" id="LevelA" value="LevelA" />
                             <label for="LevelA">A</label>
@@ -42,8 +44,8 @@
                         </fieldset>
                     </div>
                 </div>
-                <div class="wide" data-role="fieldcontain">
-                    <input type="checkbox" id="YearMode" data-role="flipswitch" data-off-text="Month" data-on-text="Year">
+                <div class="yeardiv wide">
+                    <input type="checkbox" id="YearMode" data-role="flipswitch" data-off-text="Mois" data-on-text="An">
                 </div>
             </div>
         </div>

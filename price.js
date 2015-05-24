@@ -21,13 +21,36 @@ $(function () {
 });
 
 function init() {
-    $("#ProdE1").attr("checked", true);
-    $("#LevelA").attr("checked", true);
+    if (typeof (Storage) !== "undefined") {
+
+        var product = localStorage.getItem("Product") || "ProdE1";
+        var level = localStorage.getItem("Level") || "LevelA";
+
+        $("#" + product).attr("checked", true);
+        $("#" + level).attr("checked", true);
+
+        $("#YearMode").prop("checked", localStorage.getItem("YearMode") === "true");
+
+    } else {
+
+        $("#ProdE1").attr("checked", true);
+        $("#LevelA").attr("checked", true);
+
+    }
 
     $(".level input").checkboxradio("refresh");
     $(".product input").checkboxradio("refresh");
+    $("#YearMode").flipswitch("refresh");
 
     ProductChanged();
+}
+
+function SaveState() {
+    if (typeof (Storage) == "undefined") return;
+   
+    localStorage.setItem("Product", $(".product input:checked").val());
+    localStorage.setItem("Level", $(".level input:checked").val());
+    localStorage.setItem("YearMode", $("#YearMode").prop("checked"));
 }
 
 function ProductChanged() {
@@ -37,6 +60,7 @@ function ProductChanged() {
     Price.ListPrice = PriceList[product][level];
 
     DiscountUpdated();
+    SaveState();
 }
 
 function PriceUpdated() {
