@@ -1,3 +1,4 @@
+
 @-webkit-viewport{width:device-width}
 @-moz-viewport{width:device-width}
 @-ms-viewport{width:device-width}
@@ -5,7 +6,9 @@
 @viewport{width:device-width}
 
 div.wide {
+    margin: 10px;
     width: 100%;
+    display: inline-block;
 }
 
 #price {
